@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Demo</title>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		.gallery:hover {
+			filter: brightness(1.15);
+		}
+
+		.btn-right-side-sm,
+		.btn-right-side-md {
+			display: flex;
+			justify-content: center;
+		}
+
+		@media (min-width: 768px) {
+			.btn-right-side-md {
+				justify-content: flex-end;
+				margin-top: -16px;
+				margin-right: 42px;
+			}
+
+			.btn-right-side-md.item2 {
+				margin-right: 0px;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.btn-right-side-md.item1 {
+				margin-right: 360px;
+			}
+
+			.btn-right-side-md.item2 {
+				margin-right: 100px;
+			}
+		}
+
+		@media (min-width: 576px) {
+			.btn-right-side-sm {
+				justify-content: flex-end;
+				margin-top: -16px;
+				margin-right: 220px;
+			}
+		}
+
+		/* gray page css */
+		:root {
+			--gray-dark: #223;
+			--red: #E31837;
+			--pink: #F03355;
+		}
+
+		.topper .icon span {
+			color: var(--red);
+		}
+
+		a {
+			color: var(--red);
+		}
+
+		.owl-carousel.home-slider .slider-item .overlay {
+			background: linear-gradient(45deg, var(--gray-dark) 0%, var(--red)100%);
+		}
+
+		.owl-carousel.home-slider .owl-dots .owl-dot {
+			background: var(--red);
+		}
+
+		/* .btn.btn-primary {
+			background: var(--pink);
+			border: 1px solid var(--pink);
+		}
+
+		.btn.btn-primary:hover {
+			border: 1px solid var(--pink);
+			background: white;
+			color: var(--pink);
+		} */
+
+		.btn.btn-primary {
+			color: #fff;
+			background-color: #007bff;
+			border-color: #007bff;
+		}
+
+		.btn.btn-primary:hover {
+			color: #fff;
+			background-color: #0069d9;
+			border-color: #0062cc;
+		}
+
+
+		.bg-primary {
+			background: var(--red) !important;
+		}
+
+		.bg-darken {
+			background: var(--gray-dark) !important;
+		}
+
+		.services-2 {
+			min-height: 200px;
+		}
+
+		.services-2 .icon {
+			background: var(--pink);
+		}
+
+		#section-counter:after {
+			background: linear-gradient(45deg, var(--gray-dark) 0%, var(--red) 100%);
+		}
+
+		.ftco-consult .overlay {
+			background: #fd6100;
+			background: linear-gradient(45deg, var(--gray-dark) 0%, var(--red) 100%);
+			background: linear-gradient(45deg, #B7142D 0%, #8D0E22 100%);
+			opacity: 1;
+		}
+
+		.ftco-footer {
+			background: var(--gray-dark);
+		}
+
+		.services-2 .icon span {
+			margin-top: -6px;
+			font-weight: bold;
+		}
+
+		.bn {
+			padding: 60px;
+			/* text-shadow: 1px 1px 1px black, 1px 1px 5px black, 1px 1px 15px black; */
+		}
+
+		@media (min-width: 960px) {
+			.bn {
+				padding: 120px;
+			}
+		}
+
+		.bn h1 {
+			line-height: 1.2;
+			font-weight: 600;
+		}
+
+		.bn p a {
+			text-shadow: none;
+		}
+
+		@media (min-width: 500px) {
+			.btn-left-side-md.item1 {
+				margin-left: 180px;
+			}
+		}
+
+		.ftco-navbar-light .container {
+			background: var(--red);
+		}
+
+		.ftco-navbar-light .navbar-nav>.nav-item.active>a {
+			color: var(--gray-dark);
+			font-weight: bold;
+		}
+
+		.navbar-brand img {
+			width: 270px;
+			height: auto;
+		}
+
+		@media (max-width: 991.98px) {
+			.ftco-navbar-light {
+				background: var(--gray-dark) !important;
+			}
+		}
+
+		a:hover,
+		a:focus {
+			color: var(--pink);
+		}
+
+		.ftco-section {
+			padding: 3em 0;
+		}
+
+		.ftco-no-pb {
+			padding-bottom: 0;
+		}
+
+		.ftco-no-pt {
+			padding-top: 0;
+		}
+
+		.container-pl {
+			width: 100%;
+			padding-left: 100px;
+			padding-right: 0px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@media (max-width: 767.98px) {
+			.container-pl {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+
+		.mailGraphic {
+			display: none;
+		}
+
+		/* 不斷行 */
+		@media (min-width: 1200px) {
+			.wordkeep-widescreen {
+				word-break: keep-all;
+			}
+
+			.mailGraphic {
+				display: block;
+				position: absolute;
+				top: 100px;
+				right: 100px;
+
+			}
+
+			.mailGraphic img {
+				width: 200px;
+				height: auto;
+			}
+		}
+
+		.appointment-form .reqestButton {
+			max-width: 700px;
+		}
+
+		.appointment-form .reqestButton input {
+			background-color: white !important;
+			color: black !important;
+			padding: 12px;
+		}
+
+		.appointment-form .reqestButton input::placeholder {
+			color: #6c757d;
+			opacity: 1;
+		}
+
+		.img-position-center {
+			-o-object-position: center center;
+			object-position: center center;
+		}
+
+		.text-shadow {
+			text-shadow: 1px 1px 1px black, 1px 1px 5px black, 1px 1px 15px black;
+		}
+	</style>
+</head>
+
+<body>
+
+	<section style="height:480px">
+		<picture class="background-fill-img">
+			<source media="(max-width: 900px)" srcset="images/landscape/Eiffel%20Tower-900.jpg">
+			<source media="(min-width: 901px) and (max-width: 1280px)"
+				srcset="images/landscape/Eiffel%20Tower-1280.jpg">
+			<source media="(min-width: 1281px) and (max-width: 1600px)"
+				srcset="images/landscape/Eiffel%20Tower-1600.jpg">
+			<source media="(min-width: 1601px)" srcset="images/landscape/Eiffel%20Tower-1920.jpg">
+			<img class="background-fill-img" src="images/landscape/Eiffel%20Tower.jpg" alt="Eiffel Tower"
+				loading="lazy">
+			<img class="background-fill-img img-position-center" src="images/landscape/Eiffel%20Tower.jpg" alt="Toronto"
+				loading="lazy">
+		</picture>
+		<div class="col-md-8 bn">
+			<h1 class="mb-4 display-3 text-white text-shadow">營岸廠友部晚送</h1>
+			<h3 class="text-white text-shadow">生學他上種大設那達最真氣石！國相活地，時推一們和細加動分易一。
+			</h3>
+		</div>
+	</section>
+
+	<section class="ftco-section">
+		<div class="container-fluid px-4">
+			<div class="row justify-content-center py-2">
+				<div class="col-md-8 text-center heading-section ftco-animate">
+					<h2 class="mb-4" style="font-size: 32px;"><span class="wordkeep-widescreen">理沒操度麼們也愛色，</span><span
+							class="wordkeep-widescreen">實性一重一對每童響示義收問這小線面</span></h2>
+					<p>找業白裡發前害於舞教……場麼念內加備，聞對院長校、最仍界輕時年的為家如起裡少：看找們形西到保的落還的小飛期是居特相直南他模位和供助語聽歷工德劇人，因都道集地政看就要異或都好麼頭場西重政大可術學說牛。
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb h-100" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row justify-content-end">
+				<div class="col-md-12 py-5">
+					<div class="py-md-5">
+						<div class="heading-section heading-section-white ftco-animate mb-5">
+							<h2 class="mb-4">賽人總年子容毒文。</h2>
+							<p>是統些也會是漸件支一求？不時現對電個之農臉座有的職提查心愛兩給師有身公的賽今似內麼熱，起了一見要求月第沒望……長品亞。
+							</p>
+						</div>
+						<form action="#" class="appointment-form ftco-animate">
+							<div class="input-group mb-3 reqestButton">
+								<input type="text" class="form-control" placeholder="Your E-mail"
+									aria-label="Your E-mail" aria-describedby="basic-addon2">
+								<div class="input-group-append">
+									<button class="btn btn-secondary" type="button">哥仍有</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section ftco-no-pt ftc-no-pb">
+		<div class="container">
+			<div class="row d-flex">
+
+				<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
+					<h2 class="mb-4">續話的我本</h2>
+					<p class="mb-4">從家國多華破，這清行……人好夠微會息臺，<span style="color:var(--orange)"
+							;></span>無一對製</span>坐著在身入有的地遊費黃我公辦天種？
+					</p>
+					<p class="mb-4">
+						離談朋術三年年成這說日當學不願許生來飛來，打的法來我把以意門，企傳價於些裝負似聲位功世知？們中點正是興。愛算許服。
+					</p>
+					<p class="mb-4">
+						分組首日單預其期，生知何人此推女跟月生的爭前新青。重主晚三感！中依知照如是公列其。上麼道升兒使事對房實式大這。發術一，配打意美便次有大下天怎土面清分大我得房有的往個員導花要空。</p>
+				</div>
+				<div class="col-md-5 d-flex flex-column justify-content-center">
+					<div class="p-4 my-3 text-white" style="background-color: #343A40; border-radius: 12px;">
+						<h2 class="mb-4 text-white">學目大你引小源物天</h2>
+						<p class="mb-4">
+							基往局險這科我學而首也會通士時笑老呢對面片外了至不食全，解害遊來可需當玩了子處市明：經歡廣果講：在愛為也單行來！使讓格城笑前企受準於不外使就們於留受行國期政走臺要灣？已不無，金心土花所！年安後體先你怕一平內吃才心是重、這了幾類名是醫大多以不。
+						</p>
+						<p class="mb-4">
+							球找性在風案中。入家學器戰屋是急道是留安者內讓得相難好有如土下背度克。氣長令看善起毛絕關的為無放於助下，小商投的就清。們地蘭年當元了生同操即把人氣老車覺面不我康。此的加教上義麼外防本話馬然。
+						</p>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section bg-dark text-white">
+		<div class="container-fluid px-4">
+			<div class="row justify-content-center py-2">
+				<div class="col-md-8 text-center heading-section ftco-animate">
+					<h2 class="mb-4 text-white" style="font-size: 32px;">方理居教在戰東濟著國終</h2>
+					<p>市而認，事文夫西日學笑現果展中中自自新在密國全、在有用通化持出、學毛般明基然否臺起錯話說務時計？思我水受角收說經花覺力要克因……接時人倒書真相母燈，天而大百，跑位他器當增花證個造，得金照起地頭李開灣際然話，們就裝黑習老，燈見有可排，來道上的始母爸際個相但不。
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section ftco-no-pt ftc-no-pb">
+		<div class="container-pl">
+			<div class="row d-flex">
+				<div class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
+					<div class="img" style="background-image: url(images/Westminster%20Abbey.JPG); border">
+					</div>
+				</div>
+				<div class="col-md-7 wrap-about py-5 my-5 pr-md-4 ftco-animate">
+					<h2 class="mb-4">況成輕生有同力起夫服太民世思</h2>
+					<div class="mb-4">
+						<h3>1. 生很性媽全只沒無</h3>
+						<p>品工相總千界學奇接育，人到人生就相解利治難子有取草。
+						</p>
+					</div>
+					<div class="mb-4">
+						<h3>2. 出火即以不馬老戰兩</h3>
+						<p>今玩說怎性來準好年東黨時不……一不能像因……標學她；內統這時大陽外不不。前電作。
+						</p>
+					</div>
+					<div class="mb-4">
+						<h3>3. 之的有情過動</h3>
+						<p>要院力相裡外今他其語友媽連況我康勢越們比始該表香能分計好說農對別學此重，結現行證期景議於開費……正的陸輕示報美動意點雲近死在反人市康何變之；假次知此那使是我分保輪在這。
+						</p>
+					</div>
+					<div class="mb-4">
+						<h3>4. 身頭生一下</h3>
+						<p>大特統上或報是。是市文道做傷力上空石高靜他可出指天球，作學服影山線我局到受。照有已長情色為小色地帶，作適何其因想國球家資，怎自行里導能高維因響級小教們家他石電消，回低明我？識操的人毛個例類前今痛對的制找毒然特！會意已要放的提論完。
+						</p>
+					</div>
+					<div class="mb-4">
+						<h3>5. 書許於念因家信</h3>
+						<p>來數是，時呢入雖觀去位的程信特，園外好常全主去動。了器動不雲而合漸市習些自對設！
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section bg-dark text-white">
+		<div class="container-fluid px-4">
+			<div class="row justify-content-center py-2">
+				<div class="col-md-8 text-center heading-section ftco-animate">
+					<h2 class="mb-4 text-white" style="font-size: 32px;">定甚話雙著夫整自的之多劇類處</h2>
+					<p>光達期級考路衣，影色立，前亮光臺，夫人賽於所金目我，過地有修立以也！不空重。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-sm-3">
+					<img class="w-50" src="images/YokenChangLogo2.png" alt="LOGO" />
+				</div>
+				<div class="col-12 col-sm-9 d-flex flex-column justify-content-center">
+					<h2>關於Yoken</h2>
+					<p class="mb-4">人圖臺候那斯美女小用萬生個作可地今館，許看層們這童叫也小外，兒人們爾果改備格面一單直筆童站子過本兒那大樹們錯資一，分試心事命。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
