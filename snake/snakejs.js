@@ -160,8 +160,8 @@ function fruitReset(){
     var fruitnotOK = true;
     while(fruitnotOK){
         fruitnotOK = false;
-        fruit.x = Math.ceil(Math.random() * 55);
-        fruit.y = Math.ceil(Math.random() * 55);
+        fruit.x = Math.ceil(Math.random() * 53 + 1);
+        fruit.y = Math.ceil(Math.random() * 53 + 1);
         for (let i = 0; i < snakelength; i ++){
             if (snake[i].x == fruit.x && snake[i].y == fruit.y) fruitnotOK = true;
         }  
