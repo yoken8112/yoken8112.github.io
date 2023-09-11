@@ -7,30 +7,37 @@ var fruit = {} ;
 var snakelength = 1;
 var maxlength = 0;
 var direction ="up"
-var speed = 30;
+var speed = 10;
+let levelSpeedCountDown = 0;
 
-var status = "opening";
+var myStatus = "opening";
 
 maxlength = getCookie("yokensnakemaxlength");
 
 function MVC(){
-    if (status == "opening"){
+    if (myStatus == "opening"){
         document.getElementById("myP").innerHTML = "按空白鍵開始遊戲";
     }
-    else if (status == "playing"){
+    else if (myStatus == "playing"){
         /*if(maxlength == 0) document.getElementById("myP").innerHTML = "目前速度: " + Math.floor(1000/speed,-1) +  " | 目前長度: " + snakelength;
         else document.getElementById("myP").innerHTML = "目前速度: " + Math.floor(1000/speed,-1) +  " | 目前長度: " + snakelength + " | 最高紀錄: " + maxlength;
         */
         if(maxlength == 0) document.getElementById("myP").innerHTML = "目前長度: " + snakelength;
         else document.getElementById("myP").innerHTML = "目前長度: " + snakelength + " | 最高紀錄: " + maxlength;
-        update();
+        
+        if (levelSpeedCountDown == 0){
+            update();
+            levelSpeedCountDown += ((30-snakelength) / 3);
+        }
+        levelSpeedCountDown --;
+        if (levelSpeedCountDown <= 0) levelSpeedCountDown = 0;
     }
-    else if (status == "pause"){
+    else if (myStatus == "pause"){
         ctx.fillStyle = '#555';
         ctx.font="120px Helvetica";
         ctx.fillText("Pause", 120, 300);
     }
-    else if (status == "gameover"){
+    else if (myStatus == "gameover"){
         document.getElementById("myP").innerHTML = "遊戲結束，長度：" + snakelength + "，按R鍵重新開始遊戲";
     }
 }
@@ -73,21 +80,21 @@ function keydown(e){
         else direction = "right";
     }
     else if (keyID == "Space"){
-        if(status == "opening" || status == "pause"){
-            status = "playing";
+        if(myStatus == "opening" || myStatus == "pause"){
+            myStatus = "playing";
         }
-        else if(status == "playing"){
-            status = "pause";
+        else if(myStatus == "playing"){
+            myStatus = "pause";
         }
         
     }
     else if (keyID == "KeyR"){
-        if(status == "gameover"){
+        if(myStatus == "gameover"){
             for (let i = 0 ; i < snakelength; i ++){
                 snake.pop();
             }  
             initialValue();
-            status = "playing";
+            myStatus = "playing";
         }
     }
     console.log(direction);
@@ -172,7 +179,7 @@ function levelUpdate(){
 
 function isGameover(){
     if(snake[0].x <= 0 || snake[0].x > 55 || snake[0].y <= 0 || snake[0].y > 55){
-        status = "gameover";
+        myStatus = "gameover";
         if(snakelength >= maxlength) maxlength = snakelength;
         //speed = 50;
         document.cookie="yokensnakemaxlength=John Smith; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
@@ -181,7 +188,7 @@ function isGameover(){
     if (snakelength >= 2){
         for (let i = 1; i < snakelength; i ++){
             if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
-                status = "gameover";
+                myStatus = "gameover";
                 if(snakelength >= maxlength) maxlength = snakelength;
                 //speed = 50;
                 setCookie("yokensnakemaxlength",maxlength,30);
