@@ -182,7 +182,7 @@ function isGameover(){
         myStatus = "gameover";
         if(snakelength >= maxlength) maxlength = snakelength;
         //speed = 50;
-        document.cookie="yokensnakemaxlength=John Smith; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
+        document.cookie="yokensnakemaxlength="+maxlength+"; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
         setCookie("yokensnakemaxlength",maxlength,30);
     }
     if (snakelength >= 2){
