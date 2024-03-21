@@ -1,0 +1,45 @@
+#css_table {
+    display:table;
+    margin:0 auto;
+    width: 800px;
+}
+.css_tr {
+    display: table-row;
+    height: 30px;
+}
+.css_td1 {
+    display: table-cell;
+    width: 200px;
+}
+
+.css_td2 {
+    display: table-cell;
+    width: 100px;
+}
+
+.css_td3 {
+    display: table-cell;
+    width: 500px;
+}
+
+#divButton{
+    margin:0 auto;
+    width: 200px;
+}
+
+#divSearch{
+    margin:0 auto;
+    width: 500px;
+}
+
+.button {
+    float: left;
+    line-height: 30px;
+    background-color: #555555;
+    color: white;
+}
+
+.p{
+    float: left;
+    line-height: 10px;
+}
